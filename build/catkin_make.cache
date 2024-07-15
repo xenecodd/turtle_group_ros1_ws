@@ -1,0 +1,2 @@
+teleop_twist_keyboard:turtle_control
+-DCATKIN_DEVEL_PREFIX=/home/eypan/turtle_control_ws/devel -DCMAKE_INSTALL_PREFIX=/home/eypan/turtle_control_ws/install -G Unix Makefiles
