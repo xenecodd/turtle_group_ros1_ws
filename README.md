@@ -24,10 +24,12 @@
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/turtle2/cmd_vel
     ```
 
+5.
 Not: teleop_twist_keyboard ile ilgili bir sorun çıkarsa aşağıdaki komut satırlarını kullanabilirsiniz
     ```sh
-        cd turtle_control_ws/src
-        rm -rf teleop_twist_keyboard
-        git clone https://github.com/ros-teleop/teleop_twist_keyboard
+    cd turtle_control_ws/src
+    rm -rf teleop_twist_keyboard
+    git clone https://github.com/ros-teleop/teleop_twist_keyboard
+
     ```
     
