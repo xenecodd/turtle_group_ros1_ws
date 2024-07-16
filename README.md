@@ -31,4 +31,18 @@
     git clone https://github.com/ros-teleop/teleop_twist_keyboard
 
     ```
-    
+## 3 adet turtlebot turtle2'yi takip ediyor:
+
+![Ekran görüntüsü 2024-07-16 174124](https://github.com/user-attachments/assets/0c05d9e4-3529-40e1-ba4e-e75725e40392)
+
+##UPDATE 
+Artık turtlebotlar ani hareketler sergileyip duvara çarpmıyor
+
+1. ![image](https://github.com/user-attachments/assets/76c42e9c-f759-4a93-a8c1-95814a454cc3)
+
+2. ![image](https://github.com/user-attachments/assets/56219c1a-708c-4c9e-8010-7430e3fde85f)
+
+
+
+
+
