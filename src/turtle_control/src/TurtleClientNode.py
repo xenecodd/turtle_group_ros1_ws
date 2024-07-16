@@ -5,13 +5,13 @@ from turtle_control.srv import TurtleCreate
 class TurtleClientNode:
     def __init__(self):
         rospy.init_node("TurtleClientNode", anonymous=True)
-        rospy.wait_for_service('turtle_create')
+        rospy.wait_for_service('turtle_create')  
         try:
-            self.turtle_create_service = rospy.ServiceProxy('turtle_create', TurtleCreate)
+            self.turtle_create_service = rospy.ServiceProxy('turtle_create', TurtleCreate) # Sends the number of turtles to be created to the server
         except rospy.ServiceException as e:
             rospy.logerr("Service call failed: %s" % e)
 
-    def send_create_turtlebot(self, count):
+    def send_create_turtlebot(self, count): 
         try:
             response = self.turtle_create_service(count)
             return response.status
@@ -21,7 +21,7 @@ class TurtleClientNode:
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: TurtleClientNode.py [num_turtles]")
+        print("Usage: TurtleClientNode.py [num_turtles]")   # Warns the user if incorrect arguments are provided
         sys.exit(1)
 
     num_turtles = int(sys.argv[1])

@@ -11,13 +11,13 @@ class TFollowClient:
         except rospy.ServiceException as e:
             rospy.logerr("Service call failed: %s" % e)
 
-    def select_leader_turtlebot(self):
-        req = TurtleFollowRequest()  # req nesnesini burada oluşturun
+    def select_leader_turtlebot(self):             # Sends the selected turtlebot's name to the server
+        req = TurtleFollowRequest()  
         req.leader = input("Leader turtlebot name: ")
         try:
             response = self.turtle_follow_service(req)
             return response.status
-        except rospy.ServiceException as e:
+        except rospy.ServiceException as e:         # Prints to the screen if the service call fails
             rospy.logerr("Service call failed: %s" % e)
             return None
 
