@@ -48,7 +48,7 @@ class TFollowServer:
         vel_msg.angular.y = 0.0
         vel_msg.angular.z = self.angular_vel(self.goal_pose, pose)
 
-        if self.leader_name and self.received_turtle_names[turtle] != self.leader_name:
+        if self.leader_name and self.received_turtle_names[turtle] != self.leader_name and self.euclidean_distance(self.goal_pose,pose)> float(3):
             self.cmd_vel_publishers[turtle].publish(vel_msg)
 
     def handle_follow_turtle(self, req):
@@ -97,7 +97,7 @@ class TFollowServer:
         return constant * (self.steering_angle(goal_pose, pose) - pose.theta)
 
 def main():
-    service = TFollowServer()
+    TFollowServer()
     rospy.spin()
 
 if __name__ == "__main__":

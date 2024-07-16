@@ -41,7 +41,7 @@ class TurtleServerNode:
         self.name_pub.publish(self.turtle_names)
 
 def main():
-    service = TurtleServerNode()
+    TurtleServerNode()
     rospy.spin()
 
 if __name__ == "__main__":
